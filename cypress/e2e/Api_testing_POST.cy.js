@@ -3,8 +3,16 @@
 // POST method API testing with Positive Scenarios
 
 describe('POST Method Positive Case', () => {
+    
+    function generateRandomEmail(){
+    const randomString= Math.random().toString(36).substring(2,10)
+    const email = randomString + '@dispostable.com'
+    return email
+    }
 
     it('POST Call JSON', () => {
+
+        let emailAddress = generateRandomEmail()
 
         cy.request({
             method: 'POST',
@@ -14,14 +22,14 @@ describe('POST Method Positive Case', () => {
             },
             body: {
                 "name": "AB Test 01",
-                "email": "AbTest00567@dispostable.com",
+                "email": emailAddress,
                 "gender": "female",
                 "status": "active"
             }
 
         }).then((response)=>{
-            expect(response.status).to.eq(201)
-            expect(response.body).has.property('name', 'AB Test 01')
+            expect(response.status).to.equal(201)
+            expect(response.body).has.property("name", "AB Test 01")
             expect(response.body).has.property("gender", "female")
             expect(response.body).has.property("status", "active")
             expect(response.body.id).to.not.be.null
