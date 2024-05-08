@@ -2,7 +2,7 @@
 
 // Get method API testing with Positive Scenarios
 
-describe('API Automation GET Positive Case', () => {
+describe(' GET Method Positive Case', () => {
 
     // Get method Api testing
 
@@ -44,7 +44,7 @@ describe('API Automation GET Positive Case', () => {
 
 // Get method API testing with Negative Scenarios
 
-describe('API Automation GET Negative Case', () => {
+describe('GET Method Negative Case', () => {
 
     // Get method Api testing
     
