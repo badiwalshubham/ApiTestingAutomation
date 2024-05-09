@@ -2,9 +2,7 @@
 
 describe('API Automation ', () => {
 
-
     it('Custom Commands', () => {
-
 
         let payload = {
             "name": "AB Test 01",
