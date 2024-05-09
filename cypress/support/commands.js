@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+CypressTestComponentRenderer.Commands.add('getAPI', (url, headers) =>{
+   cy.request({
+    method: 'GET',
+    url: url,
+    headers: headers
+   })
+})
+
+Cypress.Commands.add()
